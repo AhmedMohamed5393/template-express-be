@@ -1,7 +1,7 @@
 {
-  "name": "lidl-lib-cart-be",
+  "name": "@modeso/lidl-lib-cart-be",
   "version": "0.1.0",
-  "description": "",
+  "description": "Fast and Secure cart library",
   "main": "dist/index.js",
   "directories": {
     "doc": "docs",
@@ -20,7 +20,7 @@
     "reinstall": "( rm  package-lock.json && rm -r node_modules && rm -r dist && npm install ) ||  npm install "
   },
   "author": "info@modeso.ch",
-  "license": "ISC",
+  "license": "UNLICENCED",
   "dependencies": {
     "body-parser": "~1.19.0",
     "chokidar": "~3.3.0",
@@ -45,5 +45,18 @@
     "tslint": "~5.20.1",
     "typescript": "~3.7.3",
     "@types/mongoose": "5.5.26"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Modeso/lidl-lib-cart-be.git"
+  },
+  "keywords": [
+    "cart",
+    "lidl",
+    "backend"
+  ],
+  "bugs": {
+    "url": "https://github.com/Modeso/lidl-lib-cart-be/issues"
+  },
+  "homepage": "https://github.com/Modeso/lidl-lib-cart-be#readme"
 }
