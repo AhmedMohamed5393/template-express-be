@@ -1,0 +1,8 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "../../../../modeso-microservices/tools/tslint-modeso-typescript-node.json"
+    ],
+    "jsRules": {},
+    "rulesDirectory": []
+}

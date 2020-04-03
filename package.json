@@ -1,0 +1,49 @@
+{
+  "name": "lidl-lib-cart-be",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "lint": "tslint --project '.'",
+    "lint-tests": "tslint --project './tests/.'",
+    "test": "jest --coverage --detectOpenHandles",
+    "test-debug": "DEBUG=modeso:tests:* jest --coverage --detectOpenHandles",
+    "test-debug-lib": "DEBUG=modeso:* jest --coverage --detectOpenHandles",
+    "mergetests": "npm run reinstall && npm run test",
+    "reinstall": "( rm  package-lock.json && rm -r node_modules && rm -r dist && npm install ) ||  npm install "
+  },
+  "author": "info@modeso.ch",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.19.0",
+    "chokidar": "~3.3.0",
+    "debug": "~4.1.1",
+    "dotenv": "~8.2.0",
+    "express": "~4.17.1",
+    "jsonfile": "~5.0.0",
+    "@modeso/modeso-core-backend-lib": "~0.2.0-rc-1",
+    "mongoose": "~5.8.4",
+    "pino": "~5.14.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "~1.17.1",
+    "@types/chokidar": "~2.1.3",
+    "@types/debug": "~4.1.5",
+    "@types/dotenv": "~8.2.0",
+    "@types/jest": "~24.0.23",
+    "@types/jsonfile": "~5.0.0",
+    "jest": "~24.9.0",
+    "node-mocks-http": "~1.8.0",
+    "ts-jest": "~24.2.0",
+    "tslint": "~5.20.1",
+    "typescript": "~3.7.3",
+    "@types/mongoose": "5.5.26"
+  }
+}
