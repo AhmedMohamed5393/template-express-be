@@ -12,5 +12,4 @@ export const DeliveryOption: Schema = new Schema({
     price: {type: Number, required: true, min: 0},
 });
 
-export const DeliveryOptionEntity: Model<IDeliveryOption> = model<IDeliveryOption>("DeliveryOption", DeliveryOption);
-export default DeliveryOptionEntity;
+

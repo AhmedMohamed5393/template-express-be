@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import { EventEmitter } from "events";
 import * as nodepath from "path";
 import pino from "pino";
-import { DBHandler } from "./database/DBHandler";
 import { AddToCartService } from "./services/request/AddToCartService";
 import { CreateCartService } from "./services/request/CreateCartService";
 import { GetCartItemsCountService } from "./services/request/GetCartItemsCountService";
@@ -19,10 +18,9 @@ const debug = Debug("modeso:modeso-cart:CartService");
 export class CartService implements ICartService {
 
     public static globalEvents: EventEmitter = new EventEmitter();
-    private database: DBHandler;
+ 
     constructor() {
-        this.database = new DBHandler();
-        this.database.connect();
+
     }
 
     public async createCart(req: any, res: any) {

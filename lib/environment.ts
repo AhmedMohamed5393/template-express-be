@@ -5,7 +5,7 @@ import * as nodepath from "path";
 const debug = Debug("modeso:modeso-payment:Environments");
 
 dotenv.config();
-const basedir = nodepath.dirname(require.main.filename || process.mainModule.filename);
+const basedir = nodepath.dirname(require.main.filename);
 let path;
 
 switch (process.env.NODE_ENV) {

@@ -1,11 +1,9 @@
-import CartEntity, { ICart } from "../../models/entities/Cart";
-
-import { ISerializable } from "./ISerializable";
+import { ICart } from "../../models/entities/Cart";
 
 export class CreateCartSerializer {
     private cartRequest: ICart;
     constructor(req: any) {
-        this.cartRequest = new CartEntity();
+        this.cartRequest = {} as ICart;
         this.handleCreateCart(req.headers.authorization);
     }
     public serialize(): ICart {

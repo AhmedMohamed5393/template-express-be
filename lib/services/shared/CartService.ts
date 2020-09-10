@@ -1,4 +1,4 @@
-import { CartEntity, ICart } from "../../models/entities/Cart";
+import { ICart } from "../../models/entities/Cart";
 import { IProduct } from "../../models/entities/CartProduct";
 import { CartRepository } from "../../repositories/CartRepository";
 import { RepositoriesFactory } from "../../repositories/RepositoriesFactory";

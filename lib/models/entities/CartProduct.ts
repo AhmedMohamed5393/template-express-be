@@ -1,4 +1,4 @@
-import { Document, model, Model, Schema } from "mongoose";
+import { Document, Schema } from "mongoose";
 
 export interface IProduct extends Document {
     title: string;
@@ -21,5 +21,4 @@ export const ProductSchema: Schema = new Schema({
     packagePrice: {type: Number, required: true },
     isPackagingSelected: {type: Boolean, default: false},
 });
-const CartProductEntity: Model<IProduct> = model<IProduct>("Product", ProductSchema);
-export default CartProductEntity;
+
