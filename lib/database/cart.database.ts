@@ -15,12 +15,11 @@ export class CartDatabase {
     private deliveryOptionEntity: Model<IDeliveryOption>;
 
     constructor() {
-        const dbName = env.DBPORT;
+        const dbName = env.DBNAME;
         const dbHost = env.DBHOST;
-        const dbPort = env.DBNAME;
+        const dbPort = env.DBPORT;
 
         const url = `mongodb://${dbHost}:${dbPort}/${dbName}`;
-
         const connection = mongoose.createConnection(url, { useNewUrlParser: true, useFindAndModify: true });
         this.connection = connection;
 
