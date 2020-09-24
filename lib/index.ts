@@ -1,5 +1,6 @@
 import Debug from "debug";
 import * as fs from "fs";
+import * as env from "./environment";
 import { CartServiceConfig } from "./config";
 import { CartService } from "./service";
 import MiddlewareFactory from "./utils/middleware/MiddlewareFactory";
@@ -7,6 +8,7 @@ import MiddlewareFactory from "./utils/middleware/MiddlewareFactory";
 const debug = Debug("modeso:modeso-cart:CartServiceFactory");
 
 class CartServiceFactory {
+    public static SERVICE_PORT = env.PORT_CART;
 
     public static getSpecifications() {
         const apidoc = __dirname + "/../docs/api.yml";

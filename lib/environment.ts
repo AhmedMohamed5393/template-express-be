@@ -28,3 +28,4 @@ export const DBNAME = process.env.DBNAME;
 export const DBHOST = process.env.DBHOST;
 export const DBPORT = process.env.DBPORT;
 export const LOG_LEVEL = process.env.LOG_LEVEL;
+export const PORT_CART = process.env.PORT_CART;

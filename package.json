@@ -1,6 +1,6 @@
 {
   "name": "@modeso/lidl-lib-cart-be",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Fast and Secure cart library",
   "main": "dist/index.js",
   "directories": {
@@ -28,9 +28,10 @@
     "dotenv": "~8.2.0",
     "express": "~4.17.1",
     "jsonfile": "~5.0.0",
-    "@modeso/modeso-core-backend-lib": "~0.2.0-rc-1",
+    "@modeso/modeso-core-backend-lib": "0.4.2",
     "mongoose": "~5.8.4",
-    "pino": "~5.14.0"
+    "pino": "~5.14.0",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "@types/body-parser": "~1.17.1",
