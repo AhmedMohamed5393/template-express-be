@@ -1,16 +1,17 @@
 {
-  "name": "@modeso/lidl-lib-cart-be",
-  "version": "0.2.0",
-  "description": "Fast and Secure cart library",
-  "main": "dist/index.js",
-  "directories": {
-    "doc": "docs",
-    "lib": "lib",
-    "test": "tests"
-  },
+  "name": "template-express-be",
+  "version": "0.0.0",
+  "description": "Template backend system using Node.js and express.js",
+  "main": "dist/app.js",
+  "directories": { "doc": "docs", "lib": "lib", "test": "tests" },
   "scripts": {
     "prepublish": "npm run build",
+    "prebuild": "rimraf dist",
     "build": "tsc",
+    "start": "node dist/app",
+    "start:dev": "node dist/app --watch",
+    "start:debug": "node dist/app --debug --watch",
+    "start:prod": "node dist/app",
     "lint": "tslint --project '.'",
     "lint-tests": "tslint --project './tests/.'",
     "test": "jest --coverage --detectOpenHandles",
@@ -19,45 +20,38 @@
     "mergetests": "npm run reinstall && npm run test",
     "reinstall": "( rm  package-lock.json && rm -r node_modules && rm -r dist && npm install ) ||  npm install "
   },
-  "author": "info@modeso.ch",
+  "author": "Ahmed Mohamed",
   "license": "UNLICENCED",
   "dependencies": {
-    "body-parser": "~1.19.0",
-    "chokidar": "~3.3.0",
-    "debug": "~4.1.1",
-    "dotenv": "~8.2.0",
-    "express": "~4.17.1",
-    "jsonfile": "~5.0.0",
-    "@modeso/modeso-core-backend-lib": "0.4.2",
-    "mongoose": "~5.8.4",
-    "pino": "~5.14.0",
-    "uuid": "^8.3.0"
+    "body-parser": "^1.19.2",
+    "chokidar": "^3.5.3",
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonfile": "^6.1.0",
+    "mongoose": "^6.2.4",
+    "mysql": "^2.18.1",
+    "pino": "^7.8.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/body-parser": "~1.17.1",
-    "@types/chokidar": "~2.1.3",
-    "@types/debug": "~4.1.5",
-    "@types/dotenv": "~8.2.0",
-    "@types/jest": "~24.0.23",
-    "@types/jsonfile": "~5.0.0",
-    "jest": "~24.9.0",
-    "node-mocks-http": "~1.8.0",
-    "ts-jest": "~24.2.0",
-    "tslint": "~5.20.1",
-    "typescript": "~3.7.3",
-    "@types/mongoose": "5.5.26"
+    "@types/body-parser": "^1.19.2",
+    "@types/chokidar": "^2.1.3",
+    "@types/debug": "^4.1.7",
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^27.4.1",
+    "@types/mongodb": "^4.0.7",
+    "@types/mongoose": "^5.11.97",
+    "@types/uuid": "^8.3.4",
+    "jest": "^27.5.1",
+    "node-mocks-http": "^1.11.0",
+    "ts-jest": "^27.1.3",
+    "tslint": "^6.1.3",
+    "typescript": "^4.6.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Modeso/lidl-lib-cart-be.git"
-  },
-  "keywords": [
-    "cart",
-    "lidl",
-    "backend"
-  ],
-  "bugs": {
-    "url": "https://github.com/Modeso/lidl-lib-cart-be/issues"
-  },
-  "homepage": "https://github.com/Modeso/lidl-lib-cart-be#readme"
+  "repository": { "type": "git", "url": "git+https://github.com/AhmedMohamed5393/template-express-be.git" },
+  "keywords": ["template", "backend"],
+  "bugs": { "url": "https://github.com/AhmedMohamed5393/template-express-be/issues" },
+  "homepage": "https://github.com/AhmedMohamed5393/template-express-be#readme"
 }
